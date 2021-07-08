@@ -9,10 +9,13 @@ function App() {
 //     .then(console.log)
 //     .catch(alert);
   }, []);
-  
+
+  console.log(window.location);
   return (
     <div>
-      { users.map(user => "This is a user") }
+      <>
+        { users.map(user => "This is a user") }
+      </>
     </div>
   );
 }
