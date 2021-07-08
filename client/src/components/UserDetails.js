@@ -19,7 +19,7 @@ function UserDetails(props) {
         });
       })
       .catch(alert);
-  }, []);
+  }, [id, props]);
 
   return (
     <div className='user-deets'>
