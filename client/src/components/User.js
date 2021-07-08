@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function User(props) {
   return (
-    <div className='user'>
+    <Link to={`/users/${props.user.id}`} className='user'>
       <h5>{props.user.name}</h5>
-    </div>
+    </Link>
   );
 };
 

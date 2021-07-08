@@ -15,6 +15,7 @@ const server = express();
 
 server.use(express.json());
 server.use(cors());
+
 server.use(express.static(path.join(__dirname, '../client/build')));
 
 // global middlewares and the user's router need to be connected here
@@ -23,7 +24,7 @@ server.use(logger);
 server.use('/api/users', userRouter);
 
 server.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
 module.exports = server;
